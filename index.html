@@ -1,213 +1,293 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당산 유흥 후기 & 가성비 매칭 추천 - 로컬 형들의 진짜 놀이터 가이드</title>
+    <meta name="description" content="당산역과 영등포구 당산동 일대에서 내돈내산으로 검증한 유흥 업종별 솔직 후기를 공개합니다. 덤터기 차단 견적 팁과 가성비 매칭, 정찰제 업소 안내.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: hsl(280, 20%, 6%);
+            --bg-secondary: hsl(280, 15%, 10%);
+            --bg-tertiary: hsl(280, 15%, 14%);
+            --accent: hsl(300, 95%, 55%);
+            --accent-glow: hsla(300, 95%, 55%, 0.35);
+            --accent-pink: hsl(330, 95%, 60%);
+            --text-main: hsl(0, 0%, 93%);
+            --text-muted: hsl(280, 10%, 75%);
+            --border-color: hsl(280, 15%, 20%);
+            --glass-bg: rgba(15, 10, 16, 0.75);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent-glow);
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: var(--accent-glow);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .phone-banner {
+            background: linear-gradient(90deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .phone-banner:hover {
+            transform: translateY(-3px);
+        }
+
+        .phone-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 3rem 0 1.5rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            color: var(--text-main);
+        }
+
+        .content-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--accent-pink);
+            font-weight: 600;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .review-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: "“";
+            font-size: 4rem;
+            color: var(--accent-glow);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-family: serif;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .reviewer {
+            font-weight: 600;
+            color: var(--accent-pink);
+            text-align: right;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-info {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "당산 유흥 후기 & 가성비 매칭 추천",
+      "description": "당산역과 영등포구 당산동 일대에서 내돈내산으로 검증한 유흥 업종별 솔직 후기를 공개합니다. 덤터기 차단 견적 팁과 가성비 매칭, 정찰제 업소 안내.",
+      "url": "https://dydrkrtks7-cmd.github.io/bp-t3b05-ds-night-rv-2/"
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <div class="logo">당산유흥후기</div>
+        <nav>
+            <a href="index.html">홈</a>
+            <a href="about.html">소개</a>
+            <a href="blog.html">솔직후기</a>
+        </nav>
     </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+    <section class="hero">
+        <h1>당산 유흥 후기 & 리얼 매칭 가이드<br><span style="color: var(--accent-pink);">로컬 브로들의 후회 없는 가성비 밤</span></h1>
+        <p>당산역 역세권이나 영등포구 근처에서 깔끔하고 후회 없는 마무리를 원하시나요? 내돈내산 리얼 후기를 기반으로 불필요한 거품을 쫙 뺀 당일 정찰제 예약 가이드를 제시합니다.</p>
+        
+        <div class="phone-banner">
+            <div class="phone-title">로컬 정찰제 예약 & 견적 상담</div>
+            <a href="tel:010-6279-0862" class="phone-number">010-6279-0862</a>
         </div>
-      </div>
-    </main>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">영등포 당산동 유흥 판도 솔직 분석</h2>
+        <div class="content-card">
+            <p>당산동 상권은 2호선과 9호선이 교차하여 여의도 금융가 직장인과 신촌, 마포 방면의 손님들이 자연스레 몰려드는 길목입니다. 그만큼 다양한 노래방, 셔츠룸, 가라오케가 발달해 있죠. 하지만 유동인구가 집중되는 골목 특성상 단골보다는 하루 스쳐 지나가는 뜨내기 손님을 타겟으로 한 과도한 바가지 청구가 은밀하게 기승을 부리기도 합니다. 저희가 모아둔 <span class="highlight">당산 유흥 후기</span> 플랫폼은 이러한 구태의연한 눈탱이를 원천 차단하기 위해 설립되었습니다.</p>
+            <p>저희 로컬 형들이 직접 지갑을 열어 방문하고 확인한 업소와 정직한 실장들만을 필터링했습니다. 셔츠룸부터 대형 가라오케까지, 룸비 장난이나 T/C 사기를 절대 허용하지 않는 매칭으로 브로들의 프라이드를 확실히 지켜드리겠습니다.</p>
+        </div>
+
+        <h2 class="section-title">내상 없는 즐달을 위한 2대 핵심 룰</h2>
+        <div class="content-card">
+            <p>첫째, **지정 담당제 픽스**. 가성비를 지키려면 방문 전에 로컬 전무나 담당 실장과 정확한 총주대를 확정 짓고 입장해야 합니다. 주류 종류, 매니저 T/C 시간 계산법 등을 확실히 조율해 두면 뒤통수 맞을 우려가 전혀 없습니다. 둘째, **실시간 예약 및 상황 질문**. 실시간 파트너 출근 상태를 솔직히 털어놓는 실장에게만 예약해야 귀중한 대기 시간을 허비하지 않고 신속하게 놀기 시작할 수 있습니다.</p>
+            <p>이곳 당산 유흥의 정석 가이드를 통해 언제든지 믿음직한 정보와 확실한 예약 서포트를 받으시길 바랍니다. 아래 연락처로 말씀해 주시면, 당일 가장 괜찮은 추천 플레이스와 실시간 특급 예약을 완벽하게 중개하겠습니다.</p>
+        </div>
+
+        <h2 class="section-title">당산동 밤거리 리얼 형들의 솔직 증언</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="review-text">"당산역 근처에서 친구들이랑 2차 가려고 엄청 찾아봤는데, 형들 가이드 덕분에 완전 안전하게 다녀왔네요. T/C 장난 없고 시간 꽉꽉 채워줘서 감동먹었습니다."</div>
+                <div class="reviewer">- 여의도 금융맨 (33세)</div>
+            </div>
+            <div class="review-card">
+                <div class="review-text">"솔직히 영등포 근처는 바가지 무서워서 망설였는데, 담당 부장님이 너무 매너 있게 챙겨주셔서 기분 좋게 마무리했습니다. 다음 회식 때도 꼭 여깁니다."</div>
+                <div class="reviewer">- 당산동 신브로 (28세)</div>
+            </div>
+        </div>
+    </div>
+
     <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="footer-logo">당산유흥후기</div>
+        <p class="footer-info">투명 정찰제 매칭 및 가이드 | 연락처: 010-6279-0862<br>© 2026 당산유흥후기. All rights reserved.</p>
     </footer>
-  </div>
+
 </body>
 </html>
