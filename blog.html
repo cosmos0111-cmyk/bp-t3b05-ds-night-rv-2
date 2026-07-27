@@ -2,395 +2,76 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="bpaas-design-system" content="brutalist-avantgarde">
-<meta name="bpaas-design-theme" content="kr-acid-yellow">
-<title>당산 유흥 후기 블로그 - 형들만을 위한 진짜 정보</title>
-<meta name="description" content="진짜 당산 유흥 후기만 모았다. 형님들 솔직 후기로 검증된 당산 룸싸롱, 셔츠룸, 유흥주점 정보. 2025년 최신 업소 리뷰 확인하고 형들끼리 가자! 블로그에서 생생한 경험담을 확인하세요.">
-<meta name="keywords" content="당산 유흥, 당산 유흥 후기, 당산 밤문화, 당산 룸싸롱, 당산 셔츠룸, 당산 유흥 추천, 당산 술집, 당산 유흥주점, 당산 유흥 블로그">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://t3b05-ds-night-rv-2.vercel.app/blog">
-<!-- OG 메타 -->
-<meta property="og:type" content="article">
-<meta property="og:title" content="당산 유흥 후기 블로그 - 형들만을 위한 진짜 정보">
-<meta property="og:description" content="진짜 당산 유흥 후기만 모았다. 형님들 솔직 후기로 검증된 당산 룸싸롱, 셔츠룸, 유흥주점 정보. 2025년 최신 업소 리뷰 확인하고 형들끼리 가자!">
-<meta property="og:url" content="https://t3b05-ds-night-rv-2.vercel.app/blog">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="당산 유흥 후기">
-<style>
-/* RESET & BASE */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: #1a1a1a;
-  color: #e0e0e0;
-  line-height: 1.6;
-  padding: 0;
-  margin: 0;
-}
-
-img, svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: #f5e642;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
-}
-
-a:hover {
-  border-bottom-color: #f5e642;
-}
-
-ul, ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* VARIABLES */
-:root {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2a2a2a;
-  --text-primary: #e0e0e0;
-  --text-accent: #f5e642;
-  --accent-hover: #ffe066;
-  --border-color: #f5e642;
-  --card-bg: #222;
-  --header-bg: #0f0f0f;
-  --shadow: 4px 4px 0 #f5e642;
-  --transition-speed: 0.2s;
-}
-
-/* TYPOGRAPHY */
-h1, h2, h3, h4 {
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: var(--text-accent);
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: 0.5em;
-  border-left: 6px solid var(--border-color);
-  padding-left: 0.5em;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin-bottom: 0.5em;
-}
-
-h3 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  margin-bottom: 0.3em;
-}
-
-p {
-  margin-bottom: 1em;
-}
-
-.highlight {
-  color: var(--text-accent);
-  font-weight: 700;
-  background: rgba(245, 230, 66, 0.1);
-  padding: 0.1em 0.3em;
-}
-
-/* LAYOUT */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* HEADER & NAVIGATION */
-.header {
-  background: var(--header-bg);
-  border-bottom: 3px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 1.5rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.logo a {
-  font-size: 1.4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: var(--text-accent);
-  border: none;
-  letter-spacing: 0.05em;
-}
-
-.logo a:hover {
-  border: none;
-  opacity: 0.85;
-}
-
-.nav-list {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.nav-list a {
-  color: var(--text-primary);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  border: none;
-  padding: 0.3rem 0;
-  transition: color 0.2s;
-}
-
-.nav-list a:hover {
-  color: var(--text-accent);
-}
-
-/* HAMBURGER MENU (responsive) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  background: transparent;
-  border: none;
-  padding: 4px;
-}
-
-.hamburger span {
-  width: 24px;
-  height: 3px;
-  background: var(--text-accent);
-  display: block;
-  transition: all 0.3s;
-}
-
-/* MOBILE NAV (hidden by default) */
-.mobile-nav {
-  display: none;
-  background: var(--header-bg);
-  border-top: 2px solid var(--border-color);
-  padding: 1rem;
-}
-
-.mobile-nav a {
-  display: block;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid #333;
-  font-size: 0.9rem;
-}
-
-.mobile-nav a:last-child {
-  border-bottom: none;
-}
-
-.mobile-nav a:hover {
-  color: var(--text-accent);
-}
-
-/* Responsive 768px */
-@media (max-width: 768px) {
-  .nav-list {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .mobile-nav.open {
-    display: block;
-  }
-}
-
-/* MAIN CONTENT */
-.main {
-  padding: 3rem 0;
-}
-
-/* ARTICLE / BLOG POST */
-.article {
-  background: var(--card-bg);
-  border: 2px solid var(--border-color);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow);
-}
-
-.article header {
-  margin-bottom: 1.5rem;
-}
-
-.article .meta {
-  font-size: 0.85rem;
-  color: #aaa;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.article .meta span {
-  background: rgba(245, 230, 66, 0.15);
-  padding: 0.2rem 0.6rem;
-}
-
-.article .content {
-  font-size: 1.05rem;
-}
-
-.article .content p {
-  margin-bottom: 1.2rem;
-}
-
-.article .content blockquote {
-  border-left: 4px solid var(--border-color);
-  padding-left: 1em;
-  margin: 1.5em 0;
-  font-style: italic;
-  background: rgba(245, 230, 66, 0.05);
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-
-.article .content ul {
-  margin: 1em 0;
-  padding-left: 1.5em;
-}
-
-.article .content ul li {
-  list-style: disc;
-  margin-bottom: 0.5em;
-  color: var(--text-primary);
-}
-
-.article .content .highlight-box {
-  background: rgba(245, 230, 66, 0.1);
-  border: 1px solid var(--border-color);
-  padding: 1em;
-  margin: 1.5em 0;
-}
-
-/* CARD (extra, if needed) */
-.card {
-  background: var(--card-bg);
-  border: 2px solid var(--border-color);
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  margin-bottom: 1.5rem;
-}
-
-.card h3 {
-  font-size: 1.3rem;
-}
-
-/* FOOTER */
-.footer {
-  border-top: 3px solid var(--border-color);
-  padding: 2rem 0;
-  text-align: center;
-  color: #777;
-  font-size: 0.85rem;
-}
-
-.footer a {
-  color: var(--text-accent);
-  border: none;
-}
-</style>
+<title>당산 유흥 후기 — 정보 가이드</title>
+<meta name="description" content="당산 유흥 시설을 빠르게 판단하고 싶다면? 인원·시간·목적에 맞는 선택 기준과 확인 사항을 제시합니다.">
+<meta name="keywords" content="당산 유흥 후기, 당산 나이트, 당산 클럽, 당산 바, 당산 엔터테인먼트">
+<link rel="canonical" href="https://dangsan-room-info.hardcoreroom.com/blog.html">
+<meta property="og:title" content="당산 유흥 후기 — 즉시 판단을 위한 조건별 선택 가이드">
+<meta property="og:description" content="당산 유흥 시설을 빠르게 판단하고 싶다면? 인원·시간·목적에 맞는 선택 기준과 확인 사항을 제시합니다.">
+<meta property="og:url" content="https://dangsan-room-info.hardcoreroom.com/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://dangsan-room-info.hardcoreroom.com/og-image.jpg">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header class="header">
-  <div class="header-inner">
-    <div class="logo"><a href="/">당산 유흥 후기</a></div>
-    <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="nav-list">
-      <a href="/">홈</a>
-      <a href="/reviews">후기</a>
-      <a href="/blog">블로그</a>
-      <a href="/about">소개</a>
-    </nav>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="/">홈</a>
-    <a href="/reviews">후기</a>
-    <a href="/blog">블로그</a>
-    <a href="/about">소개</a>
-  </div>
+<header class="r-side-orxu">
+  <div class="logo">당산 가이드</div>
+  <button class="menu-toggle">☰</button>
+  <nav class="k-main-5hjf">
+    <ul>
+      <li><a href="/home">홈</a></li>
+      <li><a href="/category">카테고리</a></li>
+      <li><a href="/contact">연락처</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main class="main">
-  <div class="container">
+<main class="container">
+  <section class="v-txt-s049">
+    <h1>당산 유흥, 선택은 이제 과학이다</h1>
+    <p>당산 지역의 밤문화는 무수히 다양합니다. 무작정 들어가기보다 인원 수·방문 시점·목적에 따라 체계적인 기준을 적용하면 불필요한 실수를 최소화할 수 있습니다. 이 가이드는 투명한 정보를 기반으로 합리적인 선택을 돕습니다.</p>
+    <p>우리는 ‘Transparent Ledger’라는 개념을 차용해 각 선택 항목을 명확히 기록하고 검증합니다. 감정에 휘둘리지 않고 객관적인 데이터를 바탕으로 최적의 장소를 찾도록 하세요.</p>
+  </section>
 
-    <article class="article">
-      <header>
-        <h1>당산 유흥 후기: 진짜 형님들이 추천하는 당산 룸싸롱 &amp; 셔츠룸</h1>
-        <div class="meta">
-          <span>2025.04.10</span>
-          <span>당산 유흥</span>
-          <span>By 형님</span>
-        </div>
-      </header>
+  <section class="v-txt-s049">
+    <h2>1️⃣ 인원별 최적 공간 선택</h2>
+    <p>소규모(2~4인) 모임이라면 프라이버시가 보장된 라운지 또는 개인실이 효율적입니다. 주변 소음이 적고 대화에 집중하기 좋은 환경을 제공합니다. 반면 5~10인 이상은 넓은 무대와 다채로운 음악을 즐길 수 있는 클럽이 적합합니다. 대규모 파티를 원한다면 입장 인원 제한이 없는 대형 라운지를 고려하십시오.</p>
+    <p>성별 혼합 여부에 따라 분위기가 크게 달라집니다. 남녀 혼성은 차분한 바 형태가, 동성 모임은 에너지 넘치는 리코테이션 클럽이 맞습니다. 사전 예약 정책과 인원 제한을 반드시 확인해 주세요.</p>
+  </section>
 
-      <div class="content">
-        <p>야, 형들. 오늘은 진짜 솔직하게 당산 유흥 썰 풀어볼게. 나처럼 당산에서 밤 보내는 걸 좋아하는 형이라면 공감할 거야. 요즘 당산에 유흥주점이 엄청 늘었잖아? 근데 아무 데나 가면 돈만 날리고 후회하기 딱 좋아. 내가 직접 발로 뛰고, 지갑 털어가며 경험한 당산 룸싸롱 &amp; 셔츠룸 후기를 형들한테 다 푼다.</p>
+  <section class="v-txt-s049">
+    <h2>2️⃣ 시점별 체크포인트</h2>
+    <p>주말 저녁(20시~24시)은 최다 방문객이 몰리는 피크 타임입니다. 이때는 대기 시간이 길어질 가능성이 높으며 사전 예약이 필수입니다. 평일 저녁(18시~22시)은 비교적 한산해 가격 협상이 유리하고 프리미엄 서비스가 제공되는 경우가 많습니다.</p>
+    <p>새벽(00시~04시)에는 ‘오픈 바’ 형태의 장소가 주를 이룹니다. 이 시점에서는 음료 가격이 저렴해지는 동시에 안전 관리가 강화된 곳을 선택해야 합니다. 또한 대중교통 운영 시간과 귀가 경로를 미리 확인해 두는 것이 현명합니다.</p>
+  </section>
 
-        <p>일단, <span class="highlight">당산에서 가장 핫한 룸싸롱</span>부터 짚어보자. 내가 제일 자주 가는 곳은 역시 ‘더블유’야. 분위기도 좋고, 마담이 손님 케어를 진짜 잘해. 처음 가는 형이라도 부담 없이 술 한잔 하기 좋아. 안주도 푸짐하고, 서비스가 기본 이상은 해. 단점은 주말에 예약 안 하면 거의 못 들어간다는 거. 형들 꼭 전화하고 가.</p>
+  <section class="v-txt-s049">
+    <h2>3️⃣ 목적별 핵심 기준</h2>
+    <p>‘네트워킹’이 목적이라면 비즈니스 라운지 혹은 고급 스피크이지 바를 선택하세요. 조용한 배경음악과 고급 음료가 대화를 돕습니다. ‘즐거운 파티’가 목표라면 대형 클럽과 DJ 라인이 풍부한 장소가 최선이며, 사운드 시스템·조명·무대 설비를 사전 확인하는 것이 필수입니다.</p>
+    <p>‘맛집 탐방’이라면 특색 있는 칵테일 메뉴와 푸드 페어링을 제공하는 바를 찾아보세요. 메뉴판을 온라인으로 미리 검토하고 리뷰가 많은 음식 카테고리를 우선순위에 두면 효율적입니다.</p>
+  </section>
 
-        <blockquote>
-          “내가 지난주에 형들이랑 더블유 갔는데, 진짜 시간 가는 줄 몰랐어. 마담 언니가 추천해준 위스키가 찰떡이었음. 다음 날 숙취도 없고 완전 만족.”
-        </blockquote>
+  <section class="v-txt-s049">
+    <h2>4️⃣ 현장 체크리스트</h2>
+    <p>입장 전 반드시 확인해야 할 사항은 ① 출입 제한 연령, ② 내부 흡연 여부, ③ 결제 수단(현금·카드·모바일)입니다. 또한 비상구 위치와 직원의 응급 대응 능력을 눈으로 확인하세요. 불쾌한 상황이 발생하면 즉시 관리자를 호출하고 필요 시 경찰에 연락할 수 있는 번호를 미리 메모해 두세요.</p>
+    <p>‘투명성’은 ‘신뢰’와 직결됩니다. 시설 측에서 제공하는 운영 정책과 가격표를 스크린샷으로 저장해 두면 추후 분쟁 발생 시 유리하게 작용합니다.</p>
+  </section>
 
-        <p>다음으로 셔츠룸. 당산 셔츠룸은 몇 군데 가봤는데, <span class="highlight">‘에이스’</span>가 제일 괜찮았어. 가격대는 좀 있는 편인데, 그만큼 퀄리티가 다르더라고. 직원들도 친절하고, 시스템이 투명해서 불편한 게 없어. 처음 가는 형들은 여기 추천해. 실장님한테 “형님 왔어요~” 하는 거 듣는 순간 기분 좋아짐 ㅋㅋ.</p>
+  <section class="v-txt-s049">
+    <h2>📚 FAQ</h2>
+    <p><strong>Q: 당산에서 20대 여성 단체가 안전하게 즐길 수 있는 장소는?</strong><br>
+    A: 여성 전용 라운지와 프라이빗 바가 운영되는 곳을 선택하세요. 사전 예약 시 ‘여성 전용 서비스’ 옵션을 명시하면 전담 직원이 배치되는 경우가 많습니다.</p>
 
-        <div class="highlight-box">
-          <strong>형님 꿀팁:</strong> 당산 셔츠룸 갈 때는 <strong>22시 이후</strong>가 골든타임이야. 그때쯤 자리도 많이 나고, 마담들도 좀 더 여유롭게 응대해줘. 그리고 꼭 현금 좀 들고 가. 카드만 내밀면 간혹 서비스가 달라지는 경우 있더라고.
-        </div>
+    <p><strong>Q: 새벽 2시 이후에도 영업하는 클럽은 어디인가?</strong><br>
+    A: ‘오픈 바’ 라벨이 붙은 클럽을 찾으면 됩니다. 운영 시간은 보통 00시~04시이며 입장료는 낮은 편입니다. 다만 안전 관리와 직원 수급 현황을 반드시 확인하세요.</p>
 
-        <p>그리고 유흥주점! 당산 유흥주점 중에서 <span class="highlight">‘포차킹’</span>이라는 곳이 있어. 여기는 가성비 끝판왕이야. 룸은 아니지만, 자리도 넓고 소주 한잔 하면서 재미보기 좋아. 아가씨들도 활발하고, 분위기가 완전 신나. 나는 회식 후에 2차로 자주 가는데, 형들끼리 가서 떠들기 딱이야. 단점은 흡연실이 좁다는 거? 그래도 참을 만해.</p>
+    <p><strong>Q: 예약 없이 바로 입장 가능한 바는?</strong><br>
+    A: ‘노쇼(No-Show)’ 정책을 명시한 소규모 바가 해당됩니다. 입장 전 사전 전화 확인을 통해 대기 시간을 최소화할 수 있습니다.</p>
+  </section>
+</main>
 
-        <p>마지막으로 진짜 형님들만 아는 <span class="highlight">숨은 맛집</span> 같은 유흥주점 하나 알려줄게. ‘비밀’이라는 곳인데, 간판도 없고 아는 사람만 아는 곳이야. 당산역 3번 출구에서 골목으로 5분 정도 들어가면 있어. 여기는 아가씨들 센스가 장난 아니고, 안주도 직접 요리해서 내줘. 감성적인 분위기에서 차분히 술 마시고 싶은 형한테 강추.</p>
-
-        <p>자, 형들. 당산 유흥 후기는 여기까지야. 다들 코로나 조심하고, 즐거운 밤 보내길 바란다. 내가 쓴 후기가 도움 됐으면 좋겠어. 다음에 또 재미난 썰 들고 올게!</p>
-
-        <ul>
-          <li><span class="highlight">더블유</span> – 분위기 좋고 서비스 끝판왕, 예약 필수</li>
-          <li><span class="highlight">에이스</span> – 셔츠
+<footer class="footer">
+  <p>© 2026 당산 유흥 정보 가이드. 모든 권리 보유.</p>
+</footer>
 </body>
 </html>
